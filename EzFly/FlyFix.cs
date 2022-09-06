@@ -13,7 +13,10 @@ namespace EzFly
         {
             static void Postfix()
             {
-                MovementSystem.Instance.canFly = true;
+                var msi = MovementSystem.Instance;
+
+                msi.canFly = true;
+                msi.floatSpeedMultiplier = 5f;
             }
         }
     }
