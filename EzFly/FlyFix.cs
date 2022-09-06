@@ -16,7 +16,8 @@ namespace EzFly
                 var msi = MovementSystem.Instance;
 
                 msi.canFly = true;
-                msi.floatSpeedMultiplier = 5f;
+                if (msi.floatSpeedMultiplier < 5f)
+                    msi.floatSpeedMultiplier = 5f;
             }
         }
     }
